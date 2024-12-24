@@ -25,7 +25,6 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%; /* Lebarkan elemen ke seluruh layar */
   max-width: 100%; /* Batasi lebar agar tidak melebihi layar */
-  height: 120px; /* Tetapkan tinggi tetap untuk kartu */
   display: flex;
   align-items: center;
   justify-content: space-between;
