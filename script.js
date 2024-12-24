@@ -32,12 +32,16 @@ function displayWeatherData(data) {
   const current = data.current;
 
   weatherContainer.innerHTML = `
-        <h2>${location.name}, ${location.region}</h2>
-        <p><strong>Temperature:</strong> ${current.temp_c}°C</p>
-        <p><strong>Condition:</strong> ${current.condition.text}</p>
-        <img src="${current.condition.icon}" alt="${current.condition.text}">
-        <p><strong>Humidity:</strong> ${current.humidity}%</p>
-        <p><strong>Wind Speed:</strong> ${current.wind_kph} kph</p>
+        <div class="weather-content">
+            <div class="weather-details">
+                <h2>${location.name}, ${location.region}</h2>
+                <p><strong>Temperature:</strong> ${current.temp_c}°C</p>
+                <p><strong>Condition:</strong> ${current.condition.text}</p>
+                <p><strong>Humidity:</strong> ${current.humidity}%</p>
+                <p><strong>Wind Speed:</strong> ${current.wind_kph} kph</p>
+            </div>
+            <img src="${current.condition.icon}" alt="${current.condition.text}" class="weather-icon">
+        </div>
     `;
 }
 
