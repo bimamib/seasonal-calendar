@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: flex-start; /* Letakkan elemen di bagian atas */
+  align-items: center;
   justify-content: center;
   background-color: #f4f4f9;
   height: 100vh;
@@ -14,9 +14,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 100%;
-  margin: 20px; /* Berikan margin di sekeliling elemen */
+  width: 100%; /* Lebarkan ke seluruh layar */
+  max-width: 100%; /* Pastikan tidak ada batasan */
 }
 
 #weather-container {
@@ -24,11 +23,9 @@ main {
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: calc(
-    100% - 40px
-  ); /* Berikan jarak kanan dan kiri 20px masing-masing */
-  max-width: 600px; /* Batasi lebar maksimum */
-  height: 120px;
+  width: 100%; /* Lebarkan elemen ke seluruh layar */
+  max-width: 100%; /* Batasi lebar agar tidak melebihi layar */
+  height: 120px; /* Tetapkan tinggi tetap untuk kartu */
   display: flex;
   align-items: center;
   justify-content: space-between;
