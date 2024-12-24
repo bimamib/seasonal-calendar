@@ -16,7 +16,6 @@ main {
   justify-content: center;
   width: 100%;
   max-width: 100%;
-  margin: 20px; /* Berikan margin di sekeliling elemen */
 }
 
 #weather-container {
