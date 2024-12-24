@@ -1,14 +1,12 @@
-const API_KEY = "bd986657a9ac406294945605242412"; // Ganti dengan API key Anda dari WeatherAPI
+const API_KEY = "bd986657a9ac406294945605242412"; // Ganti dengan API key Anda
 const BASE_URL = "https://api.weatherapi.com/v1/current.json";
 const COUNTRY = "Indonesia";
 const REGION = "Jakarta";
 
-// Fungsi untuk memuat data cuaca saat halaman di-load
 document.addEventListener("DOMContentLoaded", () => {
   fetchWeatherData();
 });
 
-// Fungsi untuk mengambil data cuaca dari API
 function fetchWeatherData() {
   const url = `${BASE_URL}?key=${API_KEY}&q=${REGION},${COUNTRY}`;
 
@@ -28,15 +26,8 @@ function fetchWeatherData() {
     });
 }
 
-// Fungsi untuk menampilkan data cuaca di halaman
 function displayWeatherData(data) {
   const weatherContainer = document.getElementById("weather-container");
-
-  if (!weatherContainer) {
-    console.error("Element with ID 'weather-container' not found!");
-    return;
-  }
-
   const location = data.location;
   const current = data.current;
 
@@ -50,15 +41,8 @@ function displayWeatherData(data) {
     `;
 }
 
-// Fungsi untuk menampilkan pesan error
 function displayErrorMessage() {
   const weatherContainer = document.getElementById("weather-container");
-
-  if (!weatherContainer) {
-    console.error("Element with ID 'weather-container' not found!");
-    return;
-  }
-
   weatherContainer.innerHTML = `
         <h2>Error</h2>
         <p>Failed to retrieve weather data. Please try again later.</p>
