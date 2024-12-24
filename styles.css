@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Letakkan elemen di bagian atas */
   justify-content: center;
   background-color: #f4f4f9;
   height: 100vh;
@@ -14,17 +14,20 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%; /* Lebarkan ke seluruh layar */
-  max-width: 100%; /* Pastikan tidak ada batasan */
+  width: 100%;
+  max-width: 100%;
+  margin: 20px; /* Berikan margin di sekeliling elemen */
 }
 
 #weather-container {
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Lebarkan elemen ke seluruh layar */
-  max-width: 100%; /* Batasi lebar agar tidak melebihi layar */
+  width: calc(
+    100% - 40px
+  ); /* Berikan jarak kanan dan kiri 20px masing-masing */
+  max-width: 600px; /* Batasi lebar maksimum */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,13 +46,13 @@ main {
 }
 
 .weather-details h2 {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
 .weather-details p {
-  margin: 2px 0;
-  font-size: 12px;
+  margin: 4px 0;
+  font-size: 14px;
   color: #555;
 }
 
